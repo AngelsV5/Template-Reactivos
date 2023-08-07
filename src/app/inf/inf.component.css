@@ -1,0 +1,29 @@
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    
+  }
+  
+  form {
+    width: 500px; 
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: rosybrown;
+    font-size: 20px;
+
+  }
+  
+  form div {
+    margin-bottom: 15px;
+  }
+  
+  form button[type="submit"] {
+    margin-right: 10px;
+  }

@@ -1,0 +1,32 @@
+<div class="container">
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="cedula">Cédula: </label>
+      <input type="text" id="cedula" formControlName="cedula">
+    </div>
+  
+    <div>
+      <label for="nombre">Nombre: </label>
+      <input type="text" id="nombre" formControlName="nombre">
+    </div>
+  
+    <div>
+      <label for="fechaNacimiento">Fecha de Nacimiento: </label>
+      <input type="date" id="fechaNacimiento" formControlName="fechaNacimiento">
+    </div>
+  
+    <div>
+      <label for="ciudad">Ciudad: </label>
+      <select id="ciudad" formControlName="ciudad">
+        <option value="">Selecciona una ciudad</option>
+        <option value="Ciudad 1">Cuenca</option>
+        <option value="Ciudad 2">Guayaquil</option>
+        <option value="Ciudad 3">Machala</option>
+      </select>
+    </div>
+    <button type="submit" [disabled]="formulario.invalid">Ok</button>
+    <button type="button" (click)="onCancelar()">Cancelar</button>
+  
+    <div *ngIf="mostrarMensaje">Listo-Reactive</div>
+  </form>
+  </div>

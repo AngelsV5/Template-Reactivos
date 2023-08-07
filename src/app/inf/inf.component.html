@@ -1,0 +1,36 @@
+<div class="container">
+    <form (ngSubmit)="onSubmit()" #formulario="ngForm">
+      <div>
+        <label for="cedula">Cédula:</label>
+        <input type="text" id="cedula" name="cedula" [(ngModel)]="datos.cedula" required>
+      </div>
+  
+      <div>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" [(ngModel)]="datos.nombre" required>
+      </div>
+  
+      <div>
+        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="fechaNacimiento" name="fechaNacimiento" [(ngModel)]="datos.fechaNacimiento" required>
+      </div>
+  
+      <div>
+        <label for="ciudad">Ciudad:</label>
+        <select id="ciudad" name="ciudad" [(ngModel)]="datos.ciudad" required>
+            <option value="">Selecciona una ciudad</option>
+            <option value="Ciudad 1">Santa Rosa</option>
+            <option value="Ciudad 2">Machala</option>
+            <option value="Ciudad 3">Pasaje</option>
+          </select>
+      </div>
+  
+      <button type="submit" [disabled]="!formulario.valid">Ok</button>
+      <button type="button" (click)="onCancelar()">Cancelar</button>
+  
+      <div *ngIf="mostrarMensaje">Listo</div>
+    </form>
+  </div>
+  
+ 
+  
